@@ -16,33 +16,33 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
 }
 
 function validateInput(testInput) {
-    if (testInput.value === '') {
+    if (testInput === '') {
         return "Empty";
     }
-    if (isNaN(Number(testInput.value))) {
+    if (isNaN(Number(testInput))) {
         return "Not a Number";
     }
-    if (!isNaN(Number(testInput.value))) {
+    if (!isNaN(Number(testInput))) {
         return "Is a Number";
     }
 }
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass) {
     let launchStatus = document.getElementById("launchStatus");
-    if (validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty"|| 
-        validateInput(fuelLevel) === "Empty" || validateInput(cargoMass) === "Empty") {
+    if (validateInput(pilot.value) === "Empty" || validateInput(copilot.value) === "Empty"|| 
+        validateInput(fuelLevel.value) === "Empty" || validateInput(cargoMass.value) === "Empty") {
         alert("All fields required!");
     }
-    else if (validateInput(pilot) === "Is a Number") {
+    else if (validateInput(pilot.value) === "Is a Number") {
         alert("Make sure to enter valid information for each field!");
     }
-    else if (validateInput(copilot) === "Is a Number") {
+    else if (validateInput(copilot.value) === "Is a Number") {
         alert("Make sure to enter valid information for each field!");
     }
-    else if (validateInput(fuelLevel) === "Not a Number") {
+    else if (validateInput(fuelLevel.value) === "Not a Number") {
         alert("Make sure to enter valid information for each field!");
     }
-    else if (validateInput(cargoMass) === "Not a Number") {
+    else if (validateInput(cargoMass.value) === "Not a Number") {
         alert("Make sure to enter valid information for each field!");
     }
 
