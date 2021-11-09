@@ -28,6 +28,7 @@ function validateInput(testInput) {
 }
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass) {
+    list.style.visibility = "hidden";
     if (validateInput(pilot.value) === "Empty" || validateInput(copilot.value) === "Empty"|| 
         validateInput(fuelLevel.value) === "Empty" || validateInput(cargoMass.value) === "Empty") {
         alert("All fields required!");
