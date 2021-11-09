@@ -28,7 +28,6 @@ function validateInput(testInput) {
 }
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass) {
-    let launchStatus = document.getElementById("launchStatus");
     if (validateInput(pilot.value) === "Empty" || validateInput(copilot.value) === "Empty"|| 
         validateInput(fuelLevel.value) === "Empty" || validateInput(cargoMass.value) === "Empty") {
         alert("All fields required!");
@@ -47,8 +46,8 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass) {
     }
 
     if (fuelLevel.value < 10000 && cargoMass.value > 10000) {
-        launchStatus.innerHTML = "Shuttle not ready for launch";
-        launchStatus.style.color = "red";
+        document.innerHTML = "Shuttle not ready for launch";
+        document.style.color = "red";
         list.style.visibility = "visible";
         list.innerHTML = `
         <ol>
@@ -59,8 +58,8 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass) {
         </ol>` 
     }
     else if (fuelLevel.value < 10000) {
-        launchStatus.innerHTML = "Shuttle not ready for launch";
-        launchStatus.style.color = "red";
+        document.innerHTML = "Shuttle not ready for launch";
+        document.style.color = "red";
         list.style.visibility = "visible";
         list.innerHTML = `
         <ol>
@@ -71,8 +70,8 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass) {
         </ol>` 
     }
     else if (cargoMass.value > 10000) {
-        launchStatus.innerHTML = "Shuttle not ready for launch";
-        launchStatus.style.color = "red";
+        document.innerHTML = "Shuttle not ready for launch";
+        document.style.color = "red";
         list.style.visibility = "visible";
         list.innerHTML = `
         <ol>
@@ -83,8 +82,8 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass) {
         </ol>` 
     }
     else {
-        launchStatus.innerHTML = "Shuttle is ready for launch";
-        launchStatus.style.color = "green";
+        document.innerHTML = "Shuttle is ready for launch";
+        document.style.color = "green";
         list.style.visibility = "visible";
         list.innerHTML = `
             <ol>
