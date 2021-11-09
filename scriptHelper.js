@@ -49,8 +49,8 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass) {
     if (fuelLevel.value < 10000 && cargoMass.value > 10000) {
         launchStatus.innerHTML = "Shuttle not ready for launch";
         launchStatus.style.color = "red";
-        faultyItems.style.visibility = "visible";
-        faultyItems.innerHTML = `
+        list.style.visibility = "visible";
+        list.innerHTML = `
         <ol>
             <li id="pilotStatus" data-testid="pilotStatus">Pilot ${pilot.value} Ready</li>
             <li id="copilotStatus" data-testid="copilotStatus">Co-pilot ${copilot.value} Ready</li>
@@ -61,8 +61,8 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass) {
     else if (fuelLevel.value < 10000) {
         launchStatus.innerHTML = "Shuttle not ready for launch";
         launchStatus.style.color = "red";
-        faultyItems.style.visibility = "visible";
-        faultyItems.innerHTML = `
+        list.style.visibility = "visible";
+        list.innerHTML = `
         <ol>
             <li id="pilotStatus" data-testid="pilotStatus">Pilot ${pilot.value} Ready</li>
             <li id="copilotStatus" data-testid="copilotStatus">Co-pilot ${copilot.value} Ready</li>
@@ -73,8 +73,8 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass) {
     else if (cargoMass.value > 10000) {
         launchStatus.innerHTML = "Shuttle not ready for launch";
         launchStatus.style.color = "red";
-        faultyItems.style.visibility = "visible";
-        faultyItems.innerHTML = `
+        list.style.visibility = "visible";
+        list.innerHTML = `
         <ol>
             <li id="pilotStatus" data-testid="pilotStatus">Pilot ${pilot.value} Ready</li>
             <li id="copilotStatus" data-testid="copilotStatus">Co-pilot ${copilot.value} Ready</li>
@@ -85,8 +85,8 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass) {
     else {
         launchStatus.innerHTML = "Shuttle is ready for launch";
         launchStatus.style.color = "green";
-        faultyItems.style.visibility = "visible";
-        faultyItems.innerHTML = `
+        list.style.visibility = "visible";
+        list.innerHTML = `
             <ol>
                 <li id="pilotStatus" data-testid="pilotStatus">Pilot ${pilot.value} Ready</li>
                 <li id="copilotStatus" data-testid="copilotStatus">Co-pilot ${copilot.value} Ready</li>
