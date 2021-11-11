@@ -2,6 +2,7 @@
 // Write your JavaScript code here!
 
 window.addEventListener("load", function() {
+    console.log(window.document.body);
     let form = document.querySelector("form");
     let list = document.getElementById("faultyItems");
     list.style.visibility = "hidden";
