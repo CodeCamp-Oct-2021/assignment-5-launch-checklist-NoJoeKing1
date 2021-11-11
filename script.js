@@ -3,13 +3,15 @@
 
 window.addEventListener("load", function() {
     let form = document.querySelector("form");
+    let list = document.getElementById("faultyItems");
+    list.style.visibility = "hidden";
     let missionTarget = document.getElementById("missionTarget");
     form.addEventListener("submit", function (event) {
         let pilotName = document.querySelector("input[name=pilotName]");
         let copilotName = document.querySelector("input[name=copilotName]");
         let fuelLevel = document.querySelector("input[name=fuelLevel]");
         let cargoMass = document.querySelector("input[name=cargoMass]");
-        let list = document.getElementById("faultyItems");
+        
         let launchStatus = document.getElementById("launchStatus")
         event.preventDefault();
         formSubmission(launchStatus, list, pilotName, copilotName, fuelLevel, cargoMass);
