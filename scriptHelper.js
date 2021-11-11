@@ -28,7 +28,6 @@ function validateInput(testInput) {
 }
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass) {
-    let launchStatus = document.getElementById("launchStatus")
     list.style.visibility = "hidden";
     document.innerHTML = "Awaiting Information Before Launch";
     document.style.color = "black";
